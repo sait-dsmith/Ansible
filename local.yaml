@@ -32,6 +32,6 @@
   - name: copy .bashrc file
     copy:
       src: files/bashrc
-      dest: home/usr/.bashrc
+      dest: /home/usr/.bashrc
       owner: usr
       group: usr
