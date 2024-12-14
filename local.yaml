@@ -26,5 +26,12 @@
   - name: set wallpaper position
     become_user: usr
     dconf:
-      key: "org/gnome/desktop/background/picture-options"
+      key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
+
+  - name: copy .bashrc file
+    copy:
+      src: files/bashrc
+      dest: home/usr/.bashrc
+      owner: usr
+      group: usr
